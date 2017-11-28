@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OpenDrawer : MonoBehaviour {
 
-
+	public GameObject character;
 	public Animator drawers;
 	// Use this for initialization
 	void Start () {
@@ -18,7 +18,9 @@ public class OpenDrawer : MonoBehaviour {
 	}
     void OnMouseDown()
     {
-        Debug.Log("Pressed left click.");
-        drawers.SetBool("Open", true);
+		if (character.GetComponent<CharacterPlacement> ().byDrawers) {
+			drawers.SetBool("Open", true);
+		}
+        //Debug.Log("Pressed left click.");
     }
 }
