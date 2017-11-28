@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenDrawer : MonoBehaviour {
 
 
-	Animator drawers;
+	public Animator drawers;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,9 +14,9 @@ public class OpenDrawer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetMouseButtonDown(0))
-			Debug.Log("Pressed left click.");
-			drawers.SetBool("Open", true);
-
+		if (Input.GetMouseButtonDown (0)) {
+			Debug.Log ("Pressed left click.");
+			drawers.SetBool ("Open", true);
+		}
 	}
 }

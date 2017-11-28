@@ -27,6 +27,7 @@ public class ClickAndDrag : MonoBehaviour {
 		//This lets you click on the object and drag it around:
 		Vector3 tempVector = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen ));
 
+		//makes sure you can't move on the y axis
 		transform.position = new Vector3 (tempVector.x, yPosition, tempVector.z);
 
 	}
