@@ -19,8 +19,12 @@ public class CharacterPlacement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		if (col.gameObject.name == "drawers"){
+		if (col.gameObject.name == "drawerArea"){
 			byDrawers = true;
 		}
+	}
+
+	void OnCollisionEnter(Collision col){
+		Debug.Log (col.gameObject.name);
 	}
 }
