@@ -30,7 +30,7 @@ public class CharacterMovement : MonoBehaviour
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			if (Physics.Raycast (ray, out hit)) {
 
-				transform.position = new Vector3 (hit.point.x, yPosition, hit.point.z);
+				agent.transform.position = new Vector3 (hit.point.x, yPosition, hit.point.z);
 				//agent.destination = new Vector3 (hit.point.x, yPosition, hit.point.z);
 
 				//transform.position = new Vector3 (hit.point.x, yPosition, hit.point.z);
