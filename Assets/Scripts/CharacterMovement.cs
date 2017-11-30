@@ -6,6 +6,7 @@ using System;
 
 public class CharacterMovement : MonoBehaviour
 {
+	public LayerMask Floorlayer;
 	float yPosition;
 	public bool IsMoving = false;
 
@@ -28,10 +29,10 @@ public class CharacterMovement : MonoBehaviour
             RaycastHit hit;
 
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-			if (Physics.Raycast (ray, out hit)) {
+			if (Physics.Raycast (ray, out hit, Mathf.Infinity, Floorlayer)) {
 
-				agent.transform.position = new Vector3 (hit.point.x, yPosition, hit.point.z);
-				//agent.destination = new Vector3 (hit.point.x, yPosition, hit.point.z);
+				//agent.transform.position = new Vector3 (hit.point.x, yPosition, hit.point.z);
+				agent.destination = new Vector3 (hit.point.x, yPosition, hit.point.z);
 
 				//transform.position = new Vector3 (hit.point.x, yPosition, hit.point.z);
 			}
