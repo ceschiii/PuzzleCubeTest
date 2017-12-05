@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script for detecting where the player is. 
+//Uses booleans and colliders to determine when the player is in the vicinity of specific game object. 
+//For camera zoom and narrative progression.
+
 public class CharacterPlacement : MonoBehaviour {
 
 	public bool byDrawers = false;
