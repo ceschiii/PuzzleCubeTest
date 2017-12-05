@@ -7,11 +7,13 @@ public class RoomZoom : MonoBehaviour {
     public Animator wallAnim;
     public GameObject wall;
     BoxCollider collider;
+    AudioSource audioSource;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         collider = GetComponent<BoxCollider>();
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,13 +22,15 @@ public class RoomZoom : MonoBehaviour {
 
     void OnMouseDown()
     {
-        anim.Play("CameraZoom");
+        audioSource.Play();
         StartCoroutine(ByeByeWall());
     }
 
     IEnumerator ByeByeWall()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(5);
+        anim.Play("CameraZoom");
+        
         wallAnim.Play("MainWallOpen");
       //  wall.SetActive(false);
         collider.enabled = false;

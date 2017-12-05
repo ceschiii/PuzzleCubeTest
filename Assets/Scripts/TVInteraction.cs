@@ -9,11 +9,12 @@ public class TVInteraction : MonoBehaviour {
 	public Animator anim;
     public ParticleSystem particle;
     public ParticleSystem newparticle;
+    AudioSource audioSource;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -31,8 +32,12 @@ public class TVInteraction : MonoBehaviour {
 	}
     IEnumerator LookTV()
     {
+        audioSource.Play();
+
         yield return new WaitForSeconds(0.5f);
         anim.Play("TVzoom");
+
+
         particle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
     }
     IEnumerator LookTVOut()

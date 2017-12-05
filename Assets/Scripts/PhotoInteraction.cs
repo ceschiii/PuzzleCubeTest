@@ -7,13 +7,14 @@ public class PhotoInteraction : MonoBehaviour {
 	public GameObject character;
 	//public Animator drawers;
 	public Animator anim;
-
+    AudioSource audioSource;
+    public ParticleSystem newparticle;
     public ParticleSystem particle;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,9 +25,10 @@ public class PhotoInteraction : MonoBehaviour {
 	{
 		if (character.GetComponent<CharacterPlacement> ().byPhoto) {
             //drawers.SetBool("Open", true);
+            audioSource.Play();
             StartCoroutine(LookPhoto());
             StartCoroutine(LookPhotoOut());
-            StartCoroutine(GameEnd());
+
 
         }
         //Debug.Log("Pressed left click.");
@@ -42,15 +44,11 @@ public class PhotoInteraction : MonoBehaviour {
     IEnumerator LookPhotoOut()
     {
 
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(8);
         anim.Play("PhotoZoomOut");
+        newparticle.Play();
     }
 
-    IEnumerator GameEnd()
-    {
 
-        yield return new WaitForSeconds(6);
-        anim.Play("EndZoomOut");
-    }
 
 }

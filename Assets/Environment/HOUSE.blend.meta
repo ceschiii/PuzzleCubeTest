@@ -3,7 +3,7 @@ guid: 4c4f2175a47000746a5597a834251192
 timeCreated: 1511833685
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
     100002: House
@@ -16,6 +16,8 @@ ModelImporter:
     100016: stairs
     100018: upstairswall
     100020: House_001
+    100022: MainWall_001
+    100024: House_002
     400000: //RootNode
     400002: House
     400004: MainWall
@@ -27,6 +29,8 @@ ModelImporter:
     400016: stairs
     400018: upstairswall
     400020: House_001
+    400022: MainWall_001
+    400024: House_002
     2300000: House
     2300002: MainWall
     2300004: pictureframe
@@ -37,6 +41,8 @@ ModelImporter:
     2300014: stairs
     2300016: upstairswall
     2300018: House_001
+    2300020: MainWall_001
+    2300022: House_002
     3300000: House
     3300002: MainWall
     3300004: pictureframe
@@ -47,6 +53,8 @@ ModelImporter:
     3300014: stairs
     3300016: upstairswall
     3300018: House_001
+    3300020: MainWall_001
+    3300022: House_002
     4300000: upstairswall
     4300002: MainWall
     4300004: shelf
@@ -57,6 +65,8 @@ ModelImporter:
     4300014: pictureframe_002
     4300016: pictureframe_003
     4300018: House_001
+    4300020: MainWall_001
+    4300022: House_002
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -81,7 +91,6 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -89,10 +98,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -108,7 +114,6 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
