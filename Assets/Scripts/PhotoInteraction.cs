@@ -21,10 +21,24 @@ public class PhotoInteraction : MonoBehaviour {
 	void OnMouseDown()
 	{
 		if (character.GetComponent<CharacterPlacement> ().byPhoto) {
-			//drawers.SetBool("Open", true);
+            //drawers.SetBool("Open", true);
+            StartCoroutine(LookPhoto());
+            StartCoroutine(LookPhotoOut());
 
-		}
-		//Debug.Log("Pressed left click.");
-	}
+        }
+        //Debug.Log("Pressed left click.");
+    }
+    IEnumerator LookPhoto()
+    {
+        yield return new WaitForSeconds(0.5f);
+        anim.Play("PhotoZoom");
+
+    }
+    IEnumerator LookPhotoOut()
+    {
+
+        yield return new WaitForSeconds(6);
+        anim.Play("PhotoZoomOut");
+    }
 
 }
