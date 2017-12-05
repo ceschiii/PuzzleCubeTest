@@ -25,7 +25,8 @@ public class OpenDrawer : MonoBehaviour {
     {
 		if (character.GetComponent<CharacterPlacement> ().byDrawers) {
             drawers.SetBool("Open", true);
-            anim.Play("DrawerZoom");
+            audioSource.Play();
+            
             StartCoroutine(LookDrawer());
             StartCoroutine(LookDrawerOut());
         }
@@ -33,15 +34,15 @@ public class OpenDrawer : MonoBehaviour {
     }
     IEnumerator LookDrawer()
     {
-        yield return new WaitForSeconds(0.5f);
-        
+        yield return new WaitForSeconds(1.5f);
+        anim.Play("DrawerZoom");
         particle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-        audioSource.Play();
+       
     }
     IEnumerator LookDrawerOut()
     {
 
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(9);
         anim.Play("DrawerZoomOut");
         newparticle.Play();
 }

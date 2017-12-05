@@ -1,77 +1,52 @@
 fileFormatVersion: 2
-guid: 4c4f2175a47000746a5597a834251192
-timeCreated: 1512465510
+guid: 65cfbb74e5ff2654888d6e12fbba5577
+timeCreated: 1512465779
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: House
-    100004: MainWall
-    100006: pictureframe
-    100008: pictureframe_001
-    100010: pictureframe_002
-    100012: pictureframe_003
-    100014: shelf
-    100016: stairs
-    100018: upstairswall
-    100020: House_001
-    100022: MainWall_001
-    100024: House_002
-    100026: House_003
-    400000: //RootNode
-    400002: House
-    400004: MainWall
-    400006: pictureframe
-    400008: pictureframe_001
-    400010: pictureframe_002
-    400012: pictureframe_003
-    400014: shelf
-    400016: stairs
-    400018: upstairswall
-    400020: House_001
-    400022: MainWall_001
-    400024: House_002
-    400026: House_003
+    100000: House
+    100002: House_001
+    100004: House_002
+    100006: House_003
+    100008: pictureframe
+    100010: //RootNode
+    100012: shelf
+    100014: stairs
+    100016: upstairswall
+    400000: House
+    400002: House_001
+    400004: House_002
+    400006: House_003
+    400008: pictureframe
+    400010: //RootNode
+    400012: shelf
+    400014: stairs
+    400016: upstairswall
     2300000: House
-    2300002: MainWall
-    2300004: pictureframe
-    2300006: pictureframe_001
-    2300008: pictureframe_002
-    2300010: pictureframe_003
-    2300012: shelf
-    2300014: stairs
-    2300016: upstairswall
-    2300018: House_001
-    2300020: MainWall_001
-    2300022: House_002
-    2300024: House_003
+    2300002: House_001
+    2300004: House_002
+    2300006: House_003
+    2300008: pictureframe
+    2300010: shelf
+    2300012: stairs
+    2300014: upstairswall
     3300000: House
-    3300002: MainWall
-    3300004: pictureframe
-    3300006: pictureframe_001
-    3300008: pictureframe_002
-    3300010: pictureframe_003
-    3300012: shelf
-    3300014: stairs
-    3300016: upstairswall
-    3300018: House_001
-    3300020: MainWall_001
-    3300022: House_002
-    3300024: House_003
-    4300000: upstairswall
-    4300002: MainWall
-    4300004: shelf
-    4300006: stairs
-    4300008: House
-    4300010: pictureframe
-    4300012: pictureframe_001
-    4300014: pictureframe_002
-    4300016: pictureframe_003
-    4300018: House_001
-    4300020: MainWall_001
-    4300022: House_002
-    4300024: House_003
+    3300002: House_001
+    3300004: House_002
+    3300006: House_003
+    3300008: pictureframe
+    3300010: shelf
+    3300012: stairs
+    3300014: upstairswall
+    4300000: House_003
+    4300002: House_002
+    4300004: House_001
+    4300006: upstairswall
+    4300008: shelf
+    4300010: stairs
+    4300012: House
+    4300014: pictureframe
     7400000: Default Take
     9500000: //RootNode
   materials:

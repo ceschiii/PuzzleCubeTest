@@ -6,6 +6,7 @@ public class EndGame : MonoBehaviour
 {
     public Animator anim;
     AudioSource audioSource;
+    public ParticleSystem particle;
     // Use this for initialization
     void Start()
     {
@@ -21,6 +22,6 @@ public class EndGame : MonoBehaviour
     {
         audioSource.Play();
         anim.Play("EndZoomOut");
-
+        particle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
     }
 }
