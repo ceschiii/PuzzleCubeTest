@@ -5,7 +5,8 @@ using UnityEngine;
 public class OpenDrawer : MonoBehaviour {
 
 	public GameObject character;
-	public Animator drawers;
+    public Animator drawers;
+    public Animator anim;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,7 +21,21 @@ public class OpenDrawer : MonoBehaviour {
     {
 		if (character.GetComponent<CharacterPlacement> ().byDrawers) {
 			drawers.SetBool("Open", true);
-		}
+            StartCoroutine(LookDrawer());
+            StartCoroutine(LookDrawerOut());
+        }
         //Debug.Log("Pressed left click.");
+    }
+    IEnumerator LookDrawer()
+    {
+        yield return new WaitForSeconds(1);
+        anim.Play("DrawerZoom");
+
+    }
+    IEnumerator LookDrawerOut()
+    {
+
+        yield return new WaitForSeconds(4);
+        anim.Play("DrawerZoomOut");
     }
 }
