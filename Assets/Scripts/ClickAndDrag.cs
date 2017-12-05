@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script for player movement: click and drag. Player can only be moved on the X and Z axis. 
+
 public class ClickAndDrag : MonoBehaviour {
 
 	float yPosition;
