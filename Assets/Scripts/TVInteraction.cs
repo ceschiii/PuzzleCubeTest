@@ -21,11 +21,24 @@ public class TVInteraction : MonoBehaviour {
 	void OnMouseDown()
 	{
 		if (character.GetComponent<CharacterPlacement> ().byTV) {
-			//drawers.SetBool("Open", true);
+            StartCoroutine(LookTV());
+            StartCoroutine(LookTVOut());
 
-		}
+        }
 		//Debug.Log("Pressed left click.");
 	}
+    IEnumerator LookTV()
+    {
+        yield return new WaitForSeconds(0.5f);
+        anim.Play("TVzoom");
+
+    }
+    IEnumerator LookTVOut()
+    {
+
+        yield return new WaitForSeconds(6);
+        anim.Play("TVzoomOut");
+    }
 
 
 }

@@ -28,14 +28,14 @@ public class OpenDrawer : MonoBehaviour {
     }
     IEnumerator LookDrawer()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         anim.Play("DrawerZoom");
 
     }
     IEnumerator LookDrawerOut()
     {
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(6);
         anim.Play("DrawerZoomOut");
     }
 }
