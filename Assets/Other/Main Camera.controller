@@ -139,7 +139,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: DrawerZoom
-  m_Speed: 1
+  m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101626238237042684}
@@ -163,7 +163,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: DrawerZoomOut
-  m_Speed: -1
+  m_Speed: -0.7
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
