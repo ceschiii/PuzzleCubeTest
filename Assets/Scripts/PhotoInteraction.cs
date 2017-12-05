@@ -24,6 +24,7 @@ public class PhotoInteraction : MonoBehaviour {
             //drawers.SetBool("Open", true);
             StartCoroutine(LookPhoto());
             StartCoroutine(LookPhotoOut());
+            StartCoroutine(GameEnd());
 
         }
         //Debug.Log("Pressed left click.");
@@ -39,6 +40,12 @@ public class PhotoInteraction : MonoBehaviour {
 
         yield return new WaitForSeconds(6);
         anim.Play("PhotoZoomOut");
+    }
+    IEnumerator GameEnd()
+    {
+
+        yield return new WaitForSeconds(6);
+        anim.Play("EndZoomOut");
     }
 
 }
