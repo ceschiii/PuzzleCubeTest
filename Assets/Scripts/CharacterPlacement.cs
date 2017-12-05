@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterPlacement : MonoBehaviour {
 
 	public bool byDrawers = false;
+	public bool byTV = false;
+	public bool byPhoto = false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +23,13 @@ public class CharacterPlacement : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.name == "drawerArea"){
 			byDrawers = true;
+		}
+		if (col.gameObject.name == "tvArea") {
+			byTV = true;
+		}
+
+		if (col.gameObject.name == "photoArea") {
+			byPhoto = true;
 		}
 	}
 
