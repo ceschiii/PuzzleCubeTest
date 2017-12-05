@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 using System;
 
+//Old character movement script. Not being used!!!
+
 public class CharacterMovement : MonoBehaviour
 {
 	public LayerMask Floorlayer;
