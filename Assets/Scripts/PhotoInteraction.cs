@@ -8,8 +8,10 @@ public class PhotoInteraction : MonoBehaviour {
 	//public Animator drawers;
 	public Animator anim;
 
-	// Use this for initialization
-	void Start () {
+    public ParticleSystem particle;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -29,18 +31,21 @@ public class PhotoInteraction : MonoBehaviour {
         }
         //Debug.Log("Pressed left click.");
     }
+
     IEnumerator LookPhoto()
     {
         yield return new WaitForSeconds(0.5f);
         anim.Play("PhotoZoom");
-
+        particle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
     }
+
     IEnumerator LookPhotoOut()
     {
 
         yield return new WaitForSeconds(6);
         anim.Play("PhotoZoomOut");
     }
+
     IEnumerator GameEnd()
     {
 

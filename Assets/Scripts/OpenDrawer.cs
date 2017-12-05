@@ -7,6 +7,8 @@ public class OpenDrawer : MonoBehaviour {
 	public GameObject character;
     public Animator drawers;
     public Animator anim;
+    public ParticleSystem particle;
+    public ParticleSystem newparticle;
 	// Use this for initialization
 	void Start () {
 		
@@ -30,6 +32,7 @@ public class OpenDrawer : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.5f);
         anim.Play("DrawerZoom");
+        particle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
 
     }
     IEnumerator LookDrawerOut()
@@ -37,5 +40,6 @@ public class OpenDrawer : MonoBehaviour {
 
         yield return new WaitForSeconds(6);
         anim.Play("DrawerZoomOut");
-    }
+        newparticle.Play();
+}
 }

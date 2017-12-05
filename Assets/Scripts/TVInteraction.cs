@@ -7,9 +7,11 @@ public class TVInteraction : MonoBehaviour {
 	public GameObject character;
 	//public Animator drawers;
 	public Animator anim;
+    public ParticleSystem particle;
+    public ParticleSystem newparticle;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -31,13 +33,14 @@ public class TVInteraction : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.5f);
         anim.Play("TVzoom");
-
+        particle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
     }
     IEnumerator LookTVOut()
     {
 
         yield return new WaitForSeconds(6);
         anim.Play("TVzoomOut");
+        newparticle.Play();
     }
 
 
