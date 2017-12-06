@@ -25,6 +25,7 @@ public class TVInteraction : MonoBehaviour {
 	{
 		if (character.GetComponent<CharacterPlacement> ().byTV) {
             StartCoroutine(LookTV());
+
             StartCoroutine(LookTVOut());
 
         }
